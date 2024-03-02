@@ -1,0 +1,46 @@
+.navbar-nav .nav-item {
+    opacity: 100%%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.navbar-nav .nav-item.show {
+    opacity: 1;
+}
+.timeline-container {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    transform: rotateY(45deg); /* Adjust the initial rotation angle */
+}
+
+.timeline-card {
+    position: absolute;
+    width: 200px; /* Adjust width as needed */
+    height: 300px; /* Adjust height as needed */
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease-in-out; /* Add transition for smooth animation */
+}
+
+.timeline-date {
+    background-color: #ff4d94;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+.timeline-content {
+    padding: 10px;
+}
+
+/* Adjust the rotation angle for each card */
+.timeline-card:nth-child(1) {
+    transform: rotate(0deg);
+}
+
+.timeline-card:nth-child(2) {
+    transform: rotate(60deg);
+}
+
+/* Add more rotation angles for additional cards */

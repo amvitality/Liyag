@@ -1,0 +1,626 @@
+html{
+    transition-duration:.3s;
+    scroll-behavior:smooth;
+   }
+body {
+   background-color: #ffdce5; /* Pink background */
+}
+.navbar {
+   background-color: #ff69b4; /* Different shade of pink for the navbar */
+   border-radius: 25px; /* Rounded corners */
+   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.navbar-brand{
+   font-weight: bold;
+   font-size: 24px;
+   color: #fff; /* White text color */
+}
+.navbar-toggler {
+   border: none;
+}
+.navbar-nav .nav-item{
+   margin-left: 20px;
+}
+.nav-link {
+   color: #fff;
+   font-weight: bold;
+   transition: all 0.3s ease;
+}
+.nav-link:hover {
+   color: #f8f9fa !important;
+}
+.section {
+   background-color: #fff; /* White background for sections */
+   padding: 40px 20px;
+   border-radius: 10px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+   margin-bottom: 20px;
+}
+.section-title {
+   font-size: 32px;
+   font-weight: bold;
+   color: #ff69b4; /* Pink text color */
+   margin-bottom: 20px;
+   text-align: center;
+}
+.section-content {
+   font-size: 18px;
+   color: #333; /* Dark text color */
+   line-height: 1.6;
+}
+/* button */
+.slide-in-animation {
+opacity: 0;
+transform: translateX(-100px);
+transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.slide-in-animation.show {
+opacity: 1;
+transform: translateX(0);
+}
+
+.bounce-animation {
+transition: transform 0.3s ease-in-out;
+}
+
+.bounce-animation:hover {
+transform: translateY(-5px);
+}
+
+/* */
+
+.timeline-container {
+position: relative;
+width: 100%;
+height: 400px; /* Adjust height as needed */
+overflow: hidden;
+}
+
+.timeline-card {
+position: absolute;
+top: 0;
+width: 100%;
+height: 100%;
+background-color: #f2f2f2;
+border: 1px solid #ccc;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+transition: transform 0.5s ease-in-out; /* Add transition for smooth animation */
+}
+
+.timeline-date {
+background-color: #ff4d94;
+color: #fff;
+padding: 5px 10px;
+font-weight: bold;
+}
+
+.timeline-content {
+padding: 10px;
+}
+
+/* revealing text */
+.image-container {
+position: relative;
+width: 100%;
+height: auto;
+}
+
+.img-fluid {
+transition: filter 0.3s ease-in-out; /* Add transition for smooth effect */
+}
+
+.img-fluid:hover {
+filter: blur(3px); /* Apply blur effect to the image when hovered over */
+}
+
+.revealing-text {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-size: 24px;
+color: #ff4d94;
+visibility: hidden;
+}
+
+.revealing-text.active {
+visibility: visible;
+}
+
+/**/
+
+/*love story*/
+
+#map-container {
+width: 100%;
+height: 100%;
+background-color: #f0f0f0;
+border: 1px solid #ccc;
+border-radius: 10px;
+overflow: hidden;
+position: relative;
+}
+
+.location-marker {
+position: absolute;
+background-color: #ff4d94;
+color: #fff;
+width: 20px;
+height: 20px;
+border-radius: 50%;
+text-align: center;
+line-height: 20px;
+font-size: 12px;
+cursor: pointer;
+transition: transform 0.2s ease-in-out;
+}
+
+.location-marker:hover {
+transform: scale(1.2);
+}
+/* Additional CSS for Love Story Section */
+#love-story-section .section-title {
+color: #ff007f;
+}
+
+#love-story-section .card {
+background-color: rgba(255, 255, 255, 0.9);
+}
+
+#love-story-section .card-title {
+color: #ff007f;
+}
+
+#love-story-section .card-text {
+color: #333;
+}
+
+/* Message Styles */
+.message {
+margin-bottom: 10px;
+display: flex;
+}
+
+.avatar {
+border-radius: 50%;
+margin-left: 10px;
+}
+
+.message-content {
+display: flex;
+flex-direction: column;
+}
+
+.message-bubble {
+background-color: #ff4d94;
+color: #fff;
+padding: 10px 15px;
+border-radius: 20px;
+max-width: 70%;
+word-wrap: break-word;
+animation: typing 2s steps(40) 1s forwards;
+opacity: 0;
+}
+
+.message-right .message-bubble {
+align-self: flex-end;
+background-color: #007bff;
+}
+
+.message-timestamp {
+font-size: 12px;
+color: #888;
+}
+
+/* Typing Animation */
+@keyframes typing {
+from {
+width: 0;
+}
+to {
+width: 100%;
+opacity: 1;
+}
+}
+
+/* Additional CSS for Interactive Boxes */
+.date-box {
+background-color: #ff4d94;
+color: #fff;
+padding: 10px;
+margin-bottom: 20px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+border-radius: 10px;
+}
+
+.date-box:hover {
+background-color: #ff007f;
+}
+
+.date-label {
+font-size: 18px;
+font-weight: bold;
+text-align: center;
+}
+
+.modal-content {
+background-color: #f2e6ff;
+border: none;
+border-radius: 10px;
+}
+
+.modal-header {
+background-color: #ff4d94;
+color: #fff;
+border-radius: 10px 10px 0 0;
+}
+
+.modal-title {
+font-weight: bold;
+}
+
+.modal-body {
+color: #333;
+text-align: justify;
+}
+
+.modal-body p {
+margin-bottom: 1rem;
+}
+
+/*gallery*/
+.gallery {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+object-fit: cover;
+}
+
+.card {
+position: relative;
+margin: 10px;
+overflow: hidden;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+transform: scale(1.05);
+}
+
+.card img {
+width: 300px;
+height: 200px;
+object-fit: cover;
+}
+
+.overlay {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+opacity: 0;
+transition: opacity 0.3s ease;
+}
+
+.card:hover .overlay {
+opacity: 1;
+}
+
+.overlay img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+
+/* CSS for smooth pop-in and pop-out animation */
+@keyframes popIn {
+0% { opacity: 0; transform: scale(0.8); }
+100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes popOut {
+0% { opacity: 1; transform: scale(1); }
+100% { opacity: 0; transform: scale(0.8); }
+}
+
+.hidden {
+display: none;
+}
+
+.show-more {
+text-align: center;
+margin-top: 20px;
+}
+
+.show-more button {
+padding: 10px 20px;
+background-color: #007bff;
+color: #fff;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-size: 16px;
+}
+
+/* Animate the pop-in and pop-out effect */
+.section {
+animation-duration: 0.3s;
+animation-fill-mode: both;
+}
+
+.pop-in {
+animation-name: popIn;
+}
+
+.pop-out {
+animation-name: popOut;
+}
+
+
+/* Read Me section style */
+#read-me-section {
+padding: 50px 20px;
+text-align: center;
+}
+
+.section-title {
+font-size: 32px;
+color: #333;
+margin-bottom: 30px;
+text-transform: uppercase;
+}
+
+.section-content {
+font-size: 20px;
+color: #555;
+}
+
+/* Quote container style */
+.quote-container {
+max-width: 1000px;
+margin: 0 auto;
+padding: 30px;
+background-color: rgba(255, 255, 255, 0.9);
+border-radius: 20px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+margin-bottom: 30px;
+position: relative;
+overflow: hidden;
+}
+
+.quote {
+font-size: 28px;
+font-style: italic;
+margin-bottom: 20px;
+color: #8a4baf; /* Romantic purple color */
+}
+
+/* Hover text style */
+.hover-text {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+opacity: 0;
+font-size: 20px;
+color: #fff;
+background-color: rgba(138, 75, 175, 0.8); /* Semi-transparent purple */
+padding: 10px 20px;
+border-radius: 10px;
+transition: opacity 0.5s ease;
+}
+
+/* Show hover text on hover */
+.quote-container:hover .hover-text {
+opacity: 1;
+}
+
+/* Virtual Hug Animation */
+.virtual-hug {
+text-align: center;
+margin-top: 20px;
+}
+
+.virtual-hug img {
+width: 200px; /* Adjust size as needed */
+}
+
+/* Interactive Elements */
+.interactive-elements {
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 20px;
+}
+
+.slider {
+width: 200px;
+margin: 0 20px;
+}
+
+#prev-btn, #next-btn {
+padding: 10px 20px;
+background-color: #ff69b4;
+color: #fff;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+#prev-btn:hover, #next-btn:hover {
+background-color: #d94691;
+}
+
+/* Hug Section Styles */
+#hug-section {
+text-align: center;
+padding: 50px 0;
+background-image: url('https://images.unsplash.com/photo-1556155091-04f57fdd1d34');
+background-size: cover;
+background-position: center;
+}
+/* Heart React Animation Styles */
+.heart-container {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+animation: heartBeat 1s infinite;
+}
+
+@keyframes heartBeat {
+0% {
+transform: scale(1);
+}
+50% {
+transform: scale(1.2);
+}
+100% {
+transform: scale(1);
+}
+}
+
+.heart {
+width: 50px;
+height: 50px;
+fill: #f00; /* Red color for the heart */
+opacity: 0.8; /* Adjust the opacity */
+}
+
+.section-title {
+font-size: 36px;
+font-weight: bold;
+color: #663399; /* Purple color for the title */
+margin-bottom: 20px;
+}
+
+.hug-slider-container {
+width: 40%;
+margin: 0 auto;
+}
+
+.hug-slider {
+width: 100%;
+background-color: #ffffff; /* White background for the slider */
+border: 2px solid #663399; /* Purple border for the slider */
+border-radius: 10px; /* Rounded corners */
+}
+
+.photos-container {
+display: flex;
+justify-content: space-between;
+margin-top: 30px;
+}
+
+.photo {
+width: 25%;
+transition: transform 0.5s ease;
+border-radius: 10px; /* Rounded corners for the photos */
+overflow: hidden; /* Hide overflow */
+box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.photo img {
+width: 100%;
+}
+
+/* Heart React Animation Styles */
+.heart-container {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+animation: heartBeat 1s infinite;
+}
+
+@keyframes heartBeat {
+0% {
+transform: scale(1);
+}
+50% {
+transform: scale(1.2);
+}
+100% {
+transform: scale(1);
+}
+}
+
+.heart {
+width: 30px;
+height: 30px;
+fill: #f00; /* Red color for the heart */
+opacity: 0.8; /* Adjust the opacity */
+}
+/* General styles 
+.letter1-section {
+box-sizing: border-box;
+}
+*/
+/* body { 
+margin: 0;
+padding: 0;
+font-family: Georgia, serif;
+} */
+
+/* Letter container */
+.letter1 {
+border: 5px solid black;
+max-width: 75%;
+height: auto;
+background-color: burlywood;
+border-radius: 10px;
+margin: 20px auto;
+padding: 20px;
+display: flex;
+flex-direction: column;
+font-family: Georgia;
+}
+
+/* Head section */
+.head {
+margin-bottom: 20px;
+}
+
+.indent {
+margin-left: 50px;
+}
+/* Title */
+.titulo {
+color: maroon;
+text-align: center;
+}
+
+/* Letter content */
+.letter-content {
+text-align: justify;
+margin-bottom: 20px;
+}
+
+/* Signature */
+.signatory {
+text-align: right;
+}
+
+.mahal-kita {
+    color: burlywood;
+    letter-spacing: 1px;
+    padding: 5px;
+}
+
+.mahal-kita:hover {
+    color: rgb(223, 42, 168);
+    background-color: rgb(71, 40, 0);
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 600px) {
+.letter1 {
+margin: 10px auto;
+}
+}

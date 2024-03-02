@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liyag</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <!-- Include Animate.css in your HTML -->
+    <link rel="stylesheet" type="text/css" href="./index.css">
+    <!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+
+
+</head>
+<body>
+
+   <header>
+    <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top pt-0">
+            <a class="navbar-brand" href="#">Liyag.</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home-section">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#love-story-section">Love Story</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#favorite-videos">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#read-me-section">Read Me</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="#hug-section">Hug</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link" href="#letter"><i>Liham</i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <main class="container">
+
+        <!-- Content sections go here -->
+       <!-- HOME -->
+<section id="home-section" class="section" style="background-color: #f2e6ff;">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5 pt-5 px-5 position-relative">
+                <!-- Image -->
+                <div class="image-container">
+                    <img src="Liyag-home.webp" class="img-fluid rounded-circle border border-pink shadow-lg p-1 mb-3 rounded" alt="Liyag">
+                    <!-- Revealing Text -->
+                    <div class="revealing-text">I love you</div>
+                </div>
+            </div>
+            <div class="col-lg-7 pt-5">
+                <div class="section-content">
+                    <div class="jumbotron">
+                        <h1 class="display-4" style="color: #ff007f;">Hi, Liyag.</h1>
+                        <p class="lead" style="color: #ff4d94;">Your smile shines brighter than the blush hues you love.</p>
+                        <hr class="my-4">
+                        <p class="lead" style="color: #ff4d94;">Discover our love story. </p>
+                        <a class="btn btn-primary btn-lg rounded-pill px-4 py-2 slide-in-animation bounce-animation" href="#love-story-section" role="button" style="background-color: #ff4d94; border-color: #ff4d94;">Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Love Story Section -->
+<section id="love-story-section" class="section" style="background-color: #f2e6ff;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card border-0 shadow-lg rounded-lg">
+                    <div class="card-body text-center">
+                        <h3 class="card-title mb-4">Distance Between Hearts</h3>
+                        <p class="card-text">From Luzon to Mindanao, Our Love Knows No Bounds</p>
+                        <div id="map-container" style="height: 300px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <!-- Second Concept Design Section -->
+                <div class="card border-0 shadow-lg rounded-lg">
+                    <div class="card-body">
+                        <h3 class="card-title mb-4">Our Special Moments</h3>
+                        <!-- Box 1: Date 1 -->
+                        <div class="date-box" data-toggle="modal" data-target="#letterModal1">
+                            <div class="date-label">October 13, 2023</div>
+                        </div>
+                        <!-- Box 2: Date 2 -->
+                        <div class="date-box" data-toggle="modal" data-target="#letterModal2">
+                            <div class="date-label">November 6, 2023</div>
+                        </div>
+                        <!-- Add more boxes as needed -->
+                         <!-- Box 3: Date 3 -->
+                        <div class="date-box" data-toggle="modal" data-target="#letterModal3">
+                            <div class="date-label">January 2, 2024</div>
+                        </div>
+                         <!-- Box 4: Date 4 -->
+                        <div class="date-box" data-toggle="modal" data-target="#letterModal4">
+                            <div class="date-label">February 10, 2024</div>
+                        </div>
+                         <!-- Box 5: Date 5 -->
+                        <div class="date-box" data-toggle="modal" data-target="#letterModal5">
+                            <div class="date-label">February 14, 2024</div>
+                        </div>
+<!--                         Box 6: Date 6 -->
+                        <div class="date-box" data-toggle="modal" data-target="#letterModal6">
+                            <div class="date-label">February 20, 2024</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal for Letter 1 -->
+<div class="modal fade" id="letterModal1" tabindex="-1" role="dialog" aria-labelledby="letterModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="letterModal1Label">Love's Memoirs</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Dear Liyag,</p>
+                <p>
+On October 13, 2023, the universe blessed me with the gift of your presence, and since then, my life has been infinitely better. Every moment spent with you is a treasure, and I am endlessly grateful for the love and light you bring into my world.</p>
+                <p>With love,<br> Arvin</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Letter 2 -->
+<div class="modal fade" id="letterModal2" tabindex="-1" role="dialog" aria-labelledby="letterModal2Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="letterModal2Label">I love you</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>My Dearest Liyag,</p>
+                <p>November 6, 2023 - the day our hearts whispered those three magical words, "I love you." You've filled my life with joy, and every moment with you is a precious gift.</p>
+                <p>Forever yours,<br>Arvin</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal for Letter 3 -->
+<div class="modal fade" id="letterModal3" tabindex="-1" role="dialog" aria-labelledby="letterModal2Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="letterModal2Label">Pause</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>My Dearest Liyag,</p>
+                <p>January 2, 2024, a date etched in my heart, marking the end of an era. Though our paths diverged, the memories we shared remain precious.</p>
+                <p>Forever yours,<br> Arvin</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal for Letter 4 -->
+<div class="modal fade" id="letterModal4" tabindex="-1" role="dialog" aria-labelledby="letterModal2Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="letterModal2Label">Umbrella</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>My Dearest Liyag,</p>
+                <p>Your gift of the umbrella has not only shielded me from the rain, but it has also warmed my heart with your love. You are my shelter in every storm, and I am endlessly grateful for you.</p>
+                <p>Forever yours,<br> Arvin</p>
+    
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal for Letter 5 -->
+<div class="modal fade" id="letterModal5" tabindex="-1" role="dialog" aria-labelledby="letterModal2Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" id="modal-content-5">
+            <div class="modal-header">
+                <h5 class="modal-title" id="letterModal2Label">Valentine's Day</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>My Dearest Liyag,</p>
+                <p>Happy Valentine's Day! I love you so much, love.</p><p>Handang Sumugal,<br> Arvin</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Letter 6 -->
+<div class="modal fade" id="letterModal6" tabindex="-1" role="dialog" aria-labelledby="letterModal2Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" id="modal-content-5">
+            <div class="modal-header">
+                <h5 class="modal-title" id="letterModal2Label"> Love </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>El,</p>
+                <p> It's okay, love. Naiintindihan ko. I love you.</p><p> Love,<br> Arvin</p>
+            </div>
+        </div>
+    </div>
+</div>
+        
+<!-- gallery -->
+<section id="favorite-videos" class="section" style="background-color: #f2f2f2;">
+    <h2 style="text-align: center; margin-bottom: 30px;">Gallery</h2>
+    <div class="gallery">
+        <div class="card">
+            <img src="image1.webp" alt="Eljie">
+            <div class="overlay">
+                <img src="image2.webp" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <img src="image3.webp" alt="Eljie">
+            <div class="overlay">
+                <img src="image4.jpg" alt="">
+            </div>
+        </div>
+        <!-- Add more image cards as needed -->
+        <div class="card">
+            <img src="image5.jpg" alt="Eljie">
+            <div class="overlay">
+                <img src="image6.webp" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <img src="image7.webp" alt="Eljie">
+            <div class="overlay">
+                <img src="image8.webp" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <img src="image9.webp" alt="Eljie">
+            <div class="overlay">
+                <img src="image10.webp" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <img src="image11.webp" alt="Eljie">
+            <div class="overlay">
+                <img src="image12.webp" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <img src="image13.webp" alt="Eljie">
+            <div class="overlay">
+                <img src="image14.webp" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <img src="image15.webp" alt="Eljie">
+            <div class="overlay">
+                <img src="image16.webp" alt="">
+            </div>
+        </div>
+        <div class="card">
+            <img src="image17.webp" alt="Eljie">
+            <div class="overlay">
+                <img src="image18.webp" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Read Me -->
+<section id="read-me-section" class="section" style="background-color: #f2e6ff;">
+    <div class="section-title">Read Me</div>
+    <div class="section-content">
+        <!-- Add your content here -->
+        <div class="quote-container">
+            <p class="quote">"Love is patient, love is kind. It does not envy, it does not boast, it is not proud. It does not dishonor others, it is not self-seeking, it is not easily angered, it keeps no record of wrongs. Love does not delight in evil but rejoices with the truth. It always protects, always trusts, always hopes, always perseveres. Love never fails. " - 1 Corinthians 13:4‭-‬8 NIV</p>
+            <div class="hover-text">I am endlessly inspired by the beauty of your soul.</div>
+        </div>
+    </div>
+</section>
+
+<!-- last section -->
+<!-- 
+       <section id="surprise-section" class="section" style="background-color: #f2e6ff;">
+    <div class="section-title">Surprise</div>
+    <div class="section-content">
+        <p>Prepare to be amazed by the surprises awaiting you!</p>
+       Virtual Hug Animation -->
+<!-- 
+            <img src="cartoon_hug.png" alt="Virtual Hug Animation">
+        </div>
+
+        <div class="interactive-elements">
+        
+            <input type="range" min="0" max="100" value="0" class="slider" id="content-slider">
+    
+            <button id="prev-btn">Previous</button>
+            <button id="next-btn">Next</button>
+        </div>
+    </div>
+</section>
+ -->
+       
+<section id="hug-section" class="section" style="background-color: #ffe6ff; position: relative;">
+    <div class="section-title">Slide for a Hug</div>
+    <div class="section-content">
+        <div class="hug-slider-container">
+            <input type="range" min="0" max="175" value="0" class="hug-slider" id="hug-slider">
+        </div>
+        <div class="photos-container">
+            <div class="photo" id="my-photo">
+                
+                <img src="hug.webp" alt="Eljie">
+            </div>
+            <div class="heart-container">
+                <svg class="heart" viewBox="0 0 32 29.6" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M28.4 4.8c-2.4-2.4-6.3-2.4-8.7 0L16 6.5l-3.7-3.7c-2.4-2.4-6.3-2.4-8.7 0-2.4 2.4-2.4 6.3 0 8.7l11.4 11.3 11.4-11.3c2.4-2.4 2.4-6.3 0-8.7z" fill="#f00"/>
+                </svg>
+            </div>
+            <div class="photo" id="her-photo">
+                
+                <img src="https://media.discordapp.net/attachments/1206154336137121852/1206984423837278268/IMG_20240213_232459.png?ex=65ddfed7&is=65cb89d7&hm=cefce3aeb32a57f0575789c2643a2311a428e3b2491e268e945439f631ec0a8c&=&format=webp&quality=lossless&width=296&height=395" alt="Arvin">
+            </div>
+        </div>
+    </div>
+    <div class="heart-container">
+        <svg class="heart" viewBox="0 0 32 29.6" xmlns="http://www.w3.org/2000/svg">
+            <path d="M28.4 4.8c-2.4-2.4-6.3-2.4-8.7 0L16 6.5l-3.7-3.7c-2.4-2.4-6.3-2.4-8.7 0-2.4 2.4-2.4 6.3 0 8.7l11.4 11.3 11.4-11.3c2.4-2.4 2.4-6.3 0-8.7z" fill="#f00"/>
+        </svg>
+    </div>
+</section>
+
+
+    
+        <div class="letter1" id="letter">
+    
+        
+        <div class="head">
+            <p class="left">Velante, Arvin Mortel <br>
+                National Capital Region, Philippines <br>
+                February 21, 2024
+                <br>
+                <br>
+                Bitoon-Albis, Eljie Taperla <br>
+                Caraga, Philippines
+            </p>
+            
+        </div>
+        <h1 class="titulo">Una't Huli, Muli</h1>
+        <h3 class="bati"> Liyag, </h3>
+        <div class="content">
+            <p class="letter-content">
+              <span class="indent">   Una’t huling liham na isinulat para sa ‘yo, Liyag.</span> Bihirang magsulat ng damdamin, lalo na’t tungkol sa pag-ibig. Hindi inakalang sa iyo ako mapapasulat ng ganito. Sinubukang ilatag lahat ng iniisip at nararamdaman sa oras na ito. Alay sa ‘yo, mahal kong Eljie.
+<br>
+<span class="indent">Sa bente’t bente uno ng Pebrero, natapos ang hindi inaasahan. Paulit-ulit, </span> tayo’y nasa ganitong sitwasyon na naman. <span class="mahal-kita">Mahal kita</span>, kaya’t kung ang pagsisimula muli ang natatanging solusyon na mayroon ako, desperadong tanggapin ito. Minsan, hinahanap natin ang pagmamahal, lalo na ang salitang '<span class="mahal-kita">Mahal Kita</span>'. Hindi namalayan, na sa kaunting tapik lamang sa isip at puso'y makikita na. Gumising ako nang ikaw ang iniisip. Akala ko kaya ko, hindi pala. At oo, hindi pa nakalilipas ang isang araw. Hindi ko palilipasin ang isang araw na puno ng pagsisisi kinabukasan. Gusto kitang makitang masaya, ginagawa lahat ng gusto mo. Ngunit dahil sa magkaibang mundo na mayroon tayo, may nasasaktan, nasusugatan.
+<br>
+<span class="indent">Sa mundong mayroon ka, marahil ay hindi ako handa. Pero gusto kong subukan.</span> Kahit paulit-ulit na masaktan, susubukan kong tiisin. Alam kong hindi ito ang iyong nais, na tiisin ko nalang. Kaya’t habang nasa panahon ng pagtitiis, susubukan ko rin na baguhin ang sarili sa madaming aspeto. Labis na pag–iisip, selos, at mga bagay na nakaaapekto sa pagkamit natin ng kapayapaan. 
+<br>
+<span class="indent">Nais </span> kong sa ‘yong  pag-uwi, ako ang pahinga. Patawad kung sa apat na buwan ay mas madami ang kapaguran na pinaramdam. Madami tayong pangarap para sa kinabukasan. Ikaw ang sentro ng mga pangarap ko. Ikaw ang pangarap na hindi ko kayang itapon, o ipagpalit. Busy tayo sa proseso ng pag-abot ng mga pangarap, kaya’t gusto kong sa pagpapahinga’y sa akin ka hihimlay. 
+<br>
+<span class="indent">Hindi </span>ito pag-ibig kung iisa lamang ang layunin, ‘kasiyahan.’ Sa panahong nahihirapan ka na, sa akin ka tumakbo. Sa ‘kin ka lumapit kung may kailangan. Makikinig ako. Walang bagay o kwento kang sinabi sa ‘kin na hindi ako interesado. Gusto kong marinig lahat ng tungkol sa ‘yo. Sa araw mo. Hangad ko ay ako rin ang puntahan mo sa panahon ng ligaya. Sa tagumpay, kasiyahan, at paggunita sa alaalang gustong maalala.
+<br>
+<span class="indent">Sa  </span>muling pagkakataon, sa una’t huling sulat na iyong mababasa mula sa akin, nais ko’y mahalin ka sa paraan na alam ko. Mamahalin ang buhay na mayroon ka. Dahil ganoon ang pag-ibig. Hindi ito pag-ibig kung hindi masakit. Hindi ko maisip ang hinaharap na wala ka. Sa muling pagkakataon, sana’y may pagkakataon pa. Sa una’t huli, muli, aking mahal. Mahal na mahal kita.
+<br>
+<br>
+<i>Sa pagmamahal na kailanman'y sa 'yo lamang nakalaan, muli't muling iaalay sa iyo.</i>
+<br>
+<p class="signatory">
+    Nagmamahal,
+    <br>
+    <br>
+    <strong> Arvin </strong>
+</p>
+            </p>
+
+
+        </div>
+
+    </div>
+    
+
+    
+
+
+
+
+
+<!-- 
+
+        <section id="virtual-date-section" class="section"  style="background-color: #f2e6ff;">
+            <div class="section-title">Virtual Date</div>
+            <div class="section-content">
+                <p>Let's plan a romantic virtual date to celebrate our love.</p>
+              
+            </div>
+        </section>
+ -->
+
+
+
+<!-- Virtual Timeline Section -->
+<!-- 
+<section id="timeline-section" class="section" style="background-color: #ffffff;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-content text-center">
+                    <h2 class="display-4 mb-4" style="color: #ff007f;">Our Journey Together</h2>
+                    <div class="timeline-container" id="timeline-container"> -->
+                        <!-- Timeline Cards -->
+                        <!--  
+                        <div class="timeline-card">
+                            <div class="timeline-date">January 2019</div>
+                            <div class="timeline-content">
+                                <h3 style="color: #ff007f;">Our First Date</h3>
+                                <p>Remember the butterflies in our stomachs?</p>
+                            </div>
+                        </div>
+                  
+                    <div class="timeline-container" id="timeline-container-1">
+                        <div class="timeline-card">
+                            <div class="timeline-date">June 2019</div>
+                            <div class="timeline-content">
+                                <h3 style="color: #ff007f;">Our First Vacation Together</h3>
+                                <p>Exploring new places and making memories.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-container" id="timeline-container-2">
+                        <div class="timeline-card">
+                            <div class="timeline-date">September 2019</div>
+                            <div class="timeline-content">
+                                <h3 style="color: #ff007f;">Moving in Together</h3>
+                                <p>Starting a new chapter under the same roof.</p>
+                            </div>
+                        </div>
+                    </div> -->
+                        <!-- Add more timeline cards as needed -->
+                        <!-- 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+ -->
+</main>
+
+
+
+    <footer class="bg-pink text-center py-4">
+        <!-- Footer content goes here -->
+        <p>&copy; 2024 Liyag. <i> I Love You </i> - Arvin .</p>
+    </footer>
+
+    <!-- js bootstrap v4.6 -->
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+    <!-- together now button -->
+    <script >
+document.addEventListener("DOMContentLoaded", function() {
+    const button = document.querySelector(".slide-in-animation");
+
+    function handleScroll() {
+        const buttonTop = button.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (buttonTop < windowHeight * 0.75) {
+            button.classList.add("show");
+            window.removeEventListener("scroll", handleScroll);
+        }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+});
+</script>
+
+<!-- revealing text -->
+<script type="text/javascript"> document.addEventListener("DOMContentLoaded", function() {
+    const revealingText = document.querySelector(".revealing-text");
+
+    // Add 'active' class to reveal text when hovered over the image
+    document.querySelector(".img-fluid").addEventListener("mouseenter", function() {
+        revealingText.classList.add("active");
+    });
+
+    // Remove 'active' class to hide text when mouse leaves the image
+    document.querySelector(".img-fluid").addEventListener("mouseleave", function() {
+        revealingText.classList.remove("active");
+    });
+});
+
+ </script>
+
+ <!-- love story section -->
+<script>
+    // Initialize map
+    var map = L.map('map-container').setView([51.505, -0.09], 13);
+
+    // Add tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+    }).addTo(map);
+
+    // Define marker coordinates
+    var marker1Coords = [51.5, -0.09];
+    var marker2Coords = [51.505, -0.085];
+
+    // Add markers
+    var marker1 = L.marker(marker1Coords).addTo(map);
+    var marker2 = L.marker(marker2Coords).addTo(map);
+
+    // Define path coordinates
+    var pathCoords = [marker1Coords, marker2Coords];
+
+    // Define path options
+    var pathOptions = {
+        color: 'pink',
+        weight: 5,
+        opacity: 0.7
+    };
+
+    // Add path
+    var path = L.polyline(pathCoords, pathOptions).addTo(map);
+
+    // Set map bounds to include markers and path
+    var bounds = L.latLngBounds([marker1Coords, marker2Coords]);
+    map.fitBounds(bounds);
+</script>
+
+<!-- Google Maps Embed API -->
+<script>
+    // Google Maps API key
+    const API_KEY = 'AIzaSyAf2XRD2PsB6geEUeSoPDUS69SeAtKSWGo';
+
+    // Function to initialize the map
+    function initMap() {
+        // Coordinates for NCR, Luzon, Philippines
+        const ncr = { lat: 14.6091, lng: 121.0223 };
+
+        // Coordinates for Caraga, Mindanao, Philippines
+        const caraga = { lat: 8.7316, lng: 125.1434 };
+
+        // Map options
+        const mapOptions = {
+            center: ncr, // Center the map on NCR
+            zoom: 6 // Zoom level
+        };
+
+        // Create a new map instance
+        const map = new google.maps.Map(document.getElementById('map-container'), mapOptions);
+
+        // Add markers for both places
+        new google.maps.Marker({
+            position: ncr,
+            map: map,
+            title: 'NCR, Luzon, Philippines'
+        });
+
+        new google.maps.Marker({
+            position: caraga,
+            map: map,
+            title: 'Caraga, Mindanao, Philippines'
+        });
+
+        // Define the path between the two places
+        const pathCoordinates = [ncr, caraga];
+
+        // Create a polyline to represent the path
+        const path = new google.maps.Polyline({
+            path: pathCoordinates,
+            geodesic: true,
+            strokeColor: '#FF69B4', // Pink color
+            strokeOpacity: 1.0,
+            strokeWeight: 2
+        });
+
+        // Set the path on the map
+        path.setMap(map);
+    }
+</script>
+
+<!-- Google Maps Embed API Script -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAf2XRD2PsB6geEUeSoPDUS69SeAtKSWGo&callback=initMap" async defer></script>
+
+
+<script type="text/javascript"> 
+// Function to check if an element is in the viewport
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+// Function to handle animations when section is in viewport
+function handleAnimation() {
+    const readMeSection = document.getElementById('read-me-section');
+    const quoteContainer = document.querySelector('.quote-container');
+
+    // Check if readMeSection is in viewport
+    if (isInViewport(readMeSection)) {
+        quoteContainer.classList.add('animate');
+    }
+}
+
+// Add event listener for scroll to trigger animation
+window.addEventListener('scroll', handleAnimation);
+</script>
+
+<script type="text/javascript">
+    // JavaScript for interactive elements
+document.getElementById("prev-btn").addEventListener("click", function() {
+    // Code to navigate to the previous content
+});
+
+document.getElementById("next-btn").addEventListener("click", function() {
+    // Code to navigate to the next content
+});
+
+document.getElementById("content-slider").addEventListener("input", function() {
+    // Code to update content based on slider position
+});
+
+</script>
+
+
+<script type="text/javascript"> // JavaScript for hug slider
+document.getElementById("hug-slider").addEventListener("input", function() {
+    const value = this.value;
+    const hugPercentage = value / 100;
+    const hugDistance = 50 * hugPercentage; // Maximum distance for the hug effect
+
+    // Adjusting the transform property to simulate the hug
+    document.getElementById("my-photo").style.transform = `translateX(${hugDistance}%)`;
+    document.getElementById("her-photo").style.transform = `translateX(-${hugDistance}%)`;
+});
+
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>
