@@ -624,3 +624,32 @@ text-align: right;
 margin: 10px auto;
 }
 }
+
+.gift-box {
+   width: 150px;
+   height: 150px;
+   background-image: url('circle-fill.svg'); /* Replace 'gift-box-image.jpg' with your image URL */
+   background-size: cover;
+   background-position: center;
+   cursor: pointer;
+   animation: float 5s infinite ease-in-out alternate; /* Example animation */
+   transition: transform 0.3s ease;
+   
+}
+
+.gift-box:hover {
+   transform: scale(1.1);
+}
+
+@keyframes float {
+   0% {
+       transform: translateY(0);
+   }
+   50% {
+       transform: translateY(-20px);
+   }
+   100% {
+       transform: translateY(0);
+   }
+}
+
