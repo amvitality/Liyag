@@ -653,3 +653,124 @@ margin: 10px auto;
    }
 }
 
+/* Tulip Styling */
+#tulip-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 100px;
+    height: 300px;
+  }
+  
+  .tulip {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    animation: bloom 3s ease-in-out forwards;
+  }
+  
+  .stem {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 5px;
+    height: 100px;
+    background-color: green;
+    transform: translateX(-50%);
+  }
+  
+  .leaves {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .leaf {
+    position: absolute;
+    width: 50px;
+    height: 20px;
+    background-color: green;
+    border-radius: 50% 50% 0 0;
+  }
+  
+  .leaf.left {
+    transform: rotate(-30deg);
+    left: -30px;
+  }
+  
+  .leaf.right {
+    transform: rotate(30deg);
+    right: -30px;
+  }
+  
+  .flower {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    transform: translateX(-50%);
+  }
+  
+  .petal {
+    position: absolute;
+    width: 30px;
+    height: 50px;
+    top: -40px;
+    left: -15px;
+    background-color: pink;
+    border-radius: 50% 50% 0 0;
+    transform-origin: bottom;
+  }
+  
+  .petal1 {
+    transform: rotate(0deg) scale(0);
+    animation: petal1-bloom 1s ease-in-out forwards 1.5s;
+  }
+  
+  .petal2 {
+    transform: rotate(60deg) scale(0);
+    animation: petal2-bloom 1s ease-in-out forwards 1.7s;
+  }
+  
+  .petal3 {
+    transform: rotate(-60deg) scale(0);
+    animation: petal3-bloom 1s ease-in-out forwards 1.9s;
+  }
+  
+  @keyframes bloom {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes petal1-bloom {
+    0% {
+      transform: rotate(0deg) scale(0);
+    }
+    100% {
+      transform: rotate(0deg) scale(1);
+    }
+  }
+  
+  @keyframes petal2-bloom {
+    0% {
+      transform: rotate(60deg) scale(0);
+    }
+    100% {
+      transform: rotate(60deg) scale(1);
+    }
+  }
+  
+  @keyframes petal3-bloom {
+    0% {
+      transform: rotate(-60deg) scale(0);
+    }
+    100% {
+      transform: rotate(-60deg) scale(1);
+    }
+  }
